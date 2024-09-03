@@ -1,10 +1,9 @@
 # BaSH cheat sheet
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [Help](#help)
+<!-- - [Help](#help)
 - [Navigating](#navigating)
   - [Change directory](#change-directory)
     - [Change directory to the home directory](#change-directory-to-the-home-directory)
@@ -36,7 +35,7 @@
     - [Move all the files with the same extension](#move-all-the-files-with-the-same-extension)
     - [Rename file](#rename-file)
   - [Delete file](#delete-file)
-    - [Delete multiple files](#delete-multiple-files)
+    - [Delete multiple files](#delete-multiple-files) -->
 
 <!-- /code_chunk_output -->
 

@@ -345,6 +345,9 @@ mv <file_name> <file_new_name>
 
 Use `rm` to delete a file.
 
+> [!tip]
+> `rm -v` will print the name of each deleted file.
+
 ```bash
 rm <file>
 ```

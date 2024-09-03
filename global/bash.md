@@ -170,7 +170,8 @@ Use `cp -r` to copy a directory.
 
 `cp` acts like a copy/paste.
 
-> [!tip] `cp -r -v` will print the name of each copied directory.
+> [!tip]
+> `cp -r -v` will print the name of each copied directory.
 
 ```bash
 cp -R <directory_source> <directory_destination>
@@ -188,7 +189,8 @@ Use `mv` to move a directory.
 
 `mv` acts like a cut/paste.
 
-> [!tip] `mv -v` will print the name of each moved directory.
+> [!tip]
+> `mv -v` will print the name of each moved directory.
 
 ```bash
 mv <directory_source> <directory_destination>
@@ -214,7 +216,8 @@ mv <directory_name> <directory_new_name>
 
 Use `rm` to delete a directory.
 
-> [!tip] `rm -v` will print the name of each deleted directory.
+> [!tip]
+> `rm -v` will print the name of each deleted directory.
 
 #### Delete an empty directory
 

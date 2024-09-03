@@ -1,6 +1,5 @@
 # BaSH cheat sheet
 
-
 ## Help
 
 Use `--help` to see more information.

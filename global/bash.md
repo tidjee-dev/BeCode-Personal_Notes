@@ -1,44 +1,6 @@
 # BaSH cheat sheet
 
 
-<!-- code_chunk_output -->
-
-<!-- - [Help](#help)
-- [Navigating](#navigating)
-  - [Change directory](#change-directory)
-    - [Change directory to the home directory](#change-directory-to-the-home-directory)
-    - [Change directory to the parent directory](#change-directory-to-the-parent-directory)
-    - [Change directory to a multilevel directory](#change-directory-to-a-multilevel-directory)
-  - [List directories and files](#list-directories-and-files)
-    - [List directories and files recursively](#list-directories-and-files-recursively)
-    - [Show more information for `ls`](#show-more-information-for-ls)
-  - [Show working directory](#show-working-directory)
-  - [Go to another directory but keep the current working directory in cache](#go-to-another-directory-but-keep-the-current-working-directory-in-cache)
-- [Directory operations](#directory-operations)
-  - [Create directory](#create-directory)
-    - [Create a multilevel directory](#create-a-multilevel-directory)
-    - [Create a multiple directory](#create-a-multiple-directory)
-  - [Copy directory](#copy-directory)
-  - [Move directory](#move-directory)
-    - [Rename directory](#rename-directory)
-  - [Delete directory](#delete-directory)
-    - [Delete an empty directory](#delete-an-empty-directory)
-    - [Delete a directory recursively](#delete-a-directory-recursively)
-- [File operations](#file-operations)
-  - [Create file](#create-file)
-    - [Create multiple files](#create-multiple-files)
-  - [Show file content](#show-file-content)
-    - [Show only the 10 first lines of a file](#show-only-the-10-first-lines-of-a-file)
-    - [Show only the 10 last lines of a file](#show-only-the-10-last-lines-of-a-file)
-  - [Copy file](#copy-file)
-  - [Move file](#move-file)
-    - [Move all the files with the same extension](#move-all-the-files-with-the-same-extension)
-    - [Rename file](#rename-file)
-  - [Delete file](#delete-file)
-    - [Delete multiple files](#delete-multiple-files) -->
-
-<!-- /code_chunk_output -->
-
 ## Help
 
 Use `--help` to see more information.

@@ -137,7 +137,8 @@ popd
 
 Use `mkdir` to create a new directory.
 
-> [!tip] `mkdir -v` will print the name of each created directory.
+> [!tip]
+> `mkdir -v` will print the name of each created directory.
 
 ```bash
 mkdir <directory>

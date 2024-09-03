@@ -28,6 +28,12 @@
 - [File operations](#file-operations)
   - [Create file](#create-file)
     - [Create multiple files](#create-multiple-files)
+  - [Show file content](#show-file-content)
+    - [Show only the 10 first lines of a file](#show-only-the-10-first-lines-of-a-file)
+    - [Show only the 10 last lines of a file](#show-only-the-10-last-lines-of-a-file)
+  - [Copy file](#copy-file)
+  - [Move file](#move-file)
+    - [Rename file](#rename-file)
   - [Delete file](#delete-file)
     - [Delete multiple files](#delete-multiple-files)
 
@@ -199,8 +205,6 @@ mv <directory_source> <directory_destination>
 > `<directory_source>` is the name of the directory you want to move.
 > `<directory_destination>` is the name of the directory you want to move to.
 
----
-
 #### Rename directory
 
 Use `mv` to rename a directory.
@@ -211,6 +215,8 @@ mv <directory_name> <directory_new_name>
 
 > `<directory_name>` is the name of the directory you want to rename.
 > `<directory_new_name>` is the new name of the directory.
+
+---
 
 ### Delete directory
 
@@ -258,6 +264,80 @@ touch <file1> <file2> ...
 ```
 
 > `<file1> <file2> ...` are the names of the files you want to create.
+
+---
+
+### Show file content
+
+Use `cat` to show the content of a file.
+
+```bash
+cat <file>
+```
+
+> `<file>` is the name of the file you want to show.
+
+#### Show only the 10 first lines of a file
+
+```bash
+head <file>
+```
+
+> `<file>` is the name of the file you want to show.
+
+#### Show only the 10 last lines of a file
+
+```bash
+tail <file>
+```
+
+> `<file>` is the name of the file you want to show.
+
+---
+
+### Copy file
+
+Use `cp` to copy a file.
+
+> [!tip]
+> `cp -v` will print the name of each copied file.
+
+```bash
+cp <file_source> <file_destination>
+```
+
+> `<file_source>` is the name of the file you want to copy.
+> `<file_destination>` is the name of the file you want to copy to.
+
+---
+
+### Move file
+
+Use `mv` to move a file.
+
+> [!tip]
+> `mv -v` will print the name of each moved file.
+
+```bash
+mv <file_source> <file_destination>
+```
+
+> `<file_source>` is the name of the file you want to move.
+> `<file_destination>` is the name of the file you want to move to.
+
+#### Rename file
+
+Use `mv` to rename a file.
+
+> [!tip]
+> `mv -v` will print the name of each moved file.
+
+```bash
+mv <file_name> <file_new_name>
+```
+
+> `<file_name>` is the name of the file you want to rename.
+> `<file_new_name>` is the new name of the file.
 
 ---
 

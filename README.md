@@ -6,5 +6,3 @@ This repo contains cheat sheets that I've written.
 
 - [Bash cheat sheet](global/bash.md)
 - [Git cheat sheet](global/git.md)
-
-## Development

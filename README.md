@@ -1,6 +1,6 @@
 # CheatSheets
 
-This repo contains cheat sheets that I've written.
+This repo contains cheat sheets that I've written during the Junior Developer Formation @BeCode 2024.
 
 ## Global
 

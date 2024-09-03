@@ -33,6 +33,7 @@
     - [Show only the 10 last lines of a file](#show-only-the-10-last-lines-of-a-file)
   - [Copy file](#copy-file)
   - [Move file](#move-file)
+    - [Move all the files with the same extension](#move-all-the-files-with-the-same-extension)
     - [Rename file](#rename-file)
   - [Delete file](#delete-file)
     - [Delete multiple files](#delete-multiple-files)
@@ -324,6 +325,14 @@ mv <file_source> <file_destination>
 
 > `<file_source>` is the name of the file you want to move.
 > `<file_destination>` is the name of the file you want to move to.
+
+#### Move all the files with the same extension
+
+```bash
+mv *.<file_extension>
+```
+
+> `<file_extension>` is the extension of the files you want to move.
 
 #### Rename file
 

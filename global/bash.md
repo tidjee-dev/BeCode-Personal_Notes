@@ -133,12 +133,12 @@ mkdir <directory1> <directory2> ...
 
 ### Copy directory
 
-Use `cp -r` to copy a directory.
+Use `cp -R` to copy a directory.
 
 `cp` acts like a copy/paste.
 
 > [!tip]
-> `cp -r -v` will print the name of each copied directory.
+> `cp -R -v` will print the name of each copied directory.
 
 ```bash
 cp -R <directory_source> <directory_destination>
@@ -199,7 +199,7 @@ rmdir <directory>
 #### Delete a directory recursively
 
 ```bash
-rm -r <directory>
+rm -R <directory>
 ```
 
 > `<directory>` is the name of the directory you want to delete.

@@ -235,7 +235,8 @@ echo "<text>" > <file>
 > `<text>` is the text you want to write in the file.
 > `<file>` is the name of the file you want to write in.
 
-> [!warning] > `>` will overwrite the content of the file.
+> [!warning]
+> `>` will overwrite the content of the file.
 
 #### Write multiple lines in a file
 

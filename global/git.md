@@ -132,7 +132,7 @@ git branch -d <branch_name>
 
 > `<branch_name>` is the name of the branch you want to delete.
 
-> [!tip]
+> [!warning]
 > Before deleting a branch, make sure that it is not the current branch.
 
 ## Managing changes on files

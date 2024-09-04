@@ -1,12 +1,34 @@
-# BaSH cheat sheet
+# BaSH ch
+
+## Main Commands
+
+| Command | Description               | Example                                            |
+| ------- | ------------------------- | -------------------------------------------------- |
+| `cd`    | Change directory          | `cd ~`, `cd ..`                                    |
+| `ls`    | List directories          | `ls -a`, `ls -R`, `ls -lt`                         |
+| `pwd`   | Show working dir          | `pwd`                                              |
+| `mkdir` | Create directory          | `mkdir <directory>`                                |
+| `touch` | Create file               | `touch <file>`                                     |
+| `echo`  | Write in file (overwrite) | `echo "<text>" > <file>`                           |
+| `echo`  | Write in file (append)    | `echo "<text>" >> <file>`                          |
+| `cp`    | Copy file                 | `cp <file_source> <file_destination>`              |
+| `cp -R` | Copy directory            | `cp -R <directory_source> <directory_destination>` |
+| `mv`    | Move file                 | `mv <file_source> <file_destination>`              |
+| `rm`    | Remove file               | `rm <file>`                                        |
+| `rm -R` | Remove directory          | `rm -R <directory>`                                |
+| `cat`   | Show file content         | `cat <file>`                                       |
+| `head`  | Show the 10 first lines   | `head <file>`                                      |
+| `tail`  | Show the 10 last lines    | `tail <file>`                                      |
 
 ## Help
 
 Use `--help` to see more information.
 
 ```bash
-cd --help
+<command> --help
 ```
+
+> `<command>` is the name of the command you want to see more information about.
 
 > [!note]
 > Using Linux or MacOS? You can also use `man <command>` to see the manual page of this command.
@@ -56,6 +78,12 @@ ls <options> <directory>
 ```
 
 > `<options>` and `<directory>` are optional.
+
+#### List all directories and files in the current directory
+
+```bash
+ls -a
+```
 
 #### List directories and files recursively
 
@@ -235,8 +263,7 @@ echo "<text>" > <file>
 > `<text>` is the text you want to write in the file.
 > `<file>` is the name of the file you want to write in.
 
-> [!warning]
-> `>` will overwrite the content of the file.
+> [!warning] > `>` will overwrite the content of the file.
 
 #### Write multiple lines in a file
 

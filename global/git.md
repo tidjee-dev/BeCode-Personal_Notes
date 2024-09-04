@@ -1,5 +1,27 @@
 # Git Cheat Sheet
 
+## Main Commands
+
+| Command    | Description                                    | Example                             |
+| ---------- | ---------------------------------------------- | ----------------------------------- |
+| `init`     | Initialize a new Git repository                | `git init`                          |
+| `clone`    | Clone a remote repository                      | `git clone <remote_url>`            |
+| `branch`   | Create a new branch                            | `git branch <branch_name>`          |
+| `checkout` | Checkout (switch to) a branch                  | `git checkout <branch_name>`        |
+| `checkout` | Create a new branch and switch to it           | `git checkout -b <new_branch_name>` |
+| `status`   | Show the status of the repository              | `git status`                        |
+| `add`      | Add files to the staging area                  | `git add <file>`, `git add .`       |
+| `reset`    | Unstage changes                                | `git reset <file>`                  |
+| `diff`     | Show the changes on a file                     | `git diff <file1>`                  |
+| `diff`     | Show the changes on the staged files           | `git diff --staged`                 |
+| `commit`   | Commit changes to the repository               | `git commit -m "<commit_message>"`  |
+| `push`     | Push changes to a remote repository            | `git push`                          |
+| `pull`     | Pull changes from a remote repository          | `git pull`                          |
+| `fetch`    | Fetch changes from a remote repository         | `git fetch`                         |
+| `merge`    | Merge changes from a branch                    | `git merge <branch_name>`           |
+| `log`      | View the commit history                        | `git log`                           |
+| `log`      | View the commit history with number of ins/del | `git log --stat`                    |
+
 ## Install Git
 
 You can install Git by clicking on the link below
@@ -256,24 +278,6 @@ git fetch
 
 ---
 
-### Reverting changes
-
-Use `git reset` to revert changes.
-
-```bash
-git reset <file>
-```
-
-> `<file>` is the name of the file you want to revert.
-
-#### Revert all changes
-
-Use `git reset .` to revert all changes.
-
-```bash
-git reset .
-```
-
 ### Merging branches
 
 First, switch to the branch you want to merge into.
@@ -302,6 +306,14 @@ Use `git log` to show logs.
 git log
 ```
 
+#### Show commit history with stats
+
+Use `git log --stat` to show logs with numbers of insertions and deletions.
+
+```bash
+git log --stat
+```
+
 ---
 
 ### Show the commit differences between branches
@@ -323,14 +335,6 @@ git log --follow <file>
 ```
 
 > `<file>` is the name of the file you want to show commit history.
-
----
-
-### Show the commit differences between branches
-
-```bash
-git log <branch_name_1>...<branch_name_2>
-```
 
 ## Sources
 

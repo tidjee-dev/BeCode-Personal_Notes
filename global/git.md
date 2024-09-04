@@ -49,10 +49,10 @@ git init
 ### Creating a new local directory and initialize git in it
 
 ```bash
-git init <path_to_directory>
+git init <directory>
 ```
 
-> `<path_to_directory>` is the name of the directory you want to initialize git in.
+> `<directory>` is the name of the directory you want to initialize git in.
 > After initializing git, use `cd <directory>` to move to the directory.
 
 ### Cloning a remote repository

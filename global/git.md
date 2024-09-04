@@ -132,6 +132,9 @@ git branch -d <branch_name>
 
 > `<branch_name>` is the name of the branch you want to delete.
 
+> [!tip]
+> Before deleting a branch, make sure that it is not the current branch.
+
 ## Managing changes on files
 
 ### Getting status
@@ -288,6 +291,44 @@ git merge <branch_name>
 ```
 
 > `<branch_name>` is the name of the branch you want to merge.
+
+## Inspecting and comparing branches
+
+### Show commit history
+
+Use `git log` to show logs.
+
+```bash
+git log
+```
+
+---
+
+### Show the commit differences between branches
+
+```bash
+git log <branch_name_1>..<branch_name_2>
+```
+
+> `<branch_name_1>` and `<branch_name_2>` are the names of the branches you want to compare.
+
+---
+
+### Show commit history of a specific file
+
+```bash
+git log --follow <file>
+```
+
+> `<file>` is the name of the file you want to show commit history.
+
+---
+
+### Show the commit differences between branches
+
+```bash
+git log <branch_name_1>...<branch_name_2>
+```
 
 ## Sources
 

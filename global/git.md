@@ -1,4 +1,40 @@
-# GIT Cheat Sheet
+# Git Cheat Sheet
+
+## Install Git
+
+You can install Git by clicking on the link below
+
+[> git-scm.com <](https://git-scm.com/downloads)
+
+## Setup Git
+
+- Use `git --version` to check if Git is installed.
+
+  ```bash
+  git --version
+  ```
+
+- Use `git config --global user.name` and `git config --global user.email` to configure Git.
+
+  ```bash
+  git config --global user.name "<first_name> <last_name>"
+  git config --global user.email "<email>"
+  ```
+
+  > `--global` is used to configure Git globally.
+  > `<first_name> <last_name>` is the name of the user you want to configure Git for.
+  > `<email>` is the email address of the user you want to configure Git for.
+
+- Use `git config --global color.ui` to enable colored output in Git.
+
+  ```bash
+  git config --global color.ui auto
+  ```
+
+  > `always` always color output of capable Git commands.
+  > `auto` enables colored output of capable Git commands (default).
+  > `false`, `never`, `off` or `no` disables colored output of capable Git commands.
+  > `true`, `on` or `yes` enables colored output of capable Git commands.
 
 ## Initialize
 
@@ -13,10 +49,10 @@ git init
 ### Creating a new local directory and initialize git in it
 
 ```bash
-git init <directory>
+git init <path_to_directory>
 ```
 
-> `<directory>` is the name of the directory you want to initialize git in.
+> `<path_to_directory>` is the name of the directory you want to initialize git in.
 > After initializing git, use `cd <directory>` to move to the directory.
 
 ### Cloning a remote repository
@@ -24,10 +60,10 @@ git init <directory>
 Use `git clone` to clone a repository.
 
 ```bash
-git clone <url>
+git clone <remote_url>
 ```
 
-> `<url>` is the URL of the repository you want to clone.
+> `<remote_url>` is the URL of the remote repository you want to clone.
 
 ## Working with branches
 
@@ -73,6 +109,19 @@ git checkout <branch_name>
 
 ---
 
+### Renaming a branch
+
+Use `git branch -m` to rename a branch.
+
+```bash
+git branch -m <old_branch_name> <new_branch_name>
+```
+
+> `<old_branch_name>` is the name of the branch you want to rename.
+> `<new_branch_name>` is the new name of this branch.
+
+---
+
 ### Delete a branch
 
 Use `git branch -d` to delete a branch.
@@ -84,6 +133,16 @@ git branch -d <branch_name>
 > `<branch_name>` is the name of the branch you want to delete.
 
 ## Managing changes on files
+
+### Getting status
+
+Use `git status` to get status of the working repository.
+
+```bash
+git status
+```
+
+---
 
 ### Stage changes on a file
 
@@ -107,6 +166,47 @@ git add .
 
 ---
 
+### Unstage changes on a file
+
+Use `git reset` to unstage changes.
+
+```bash
+git reset <file>
+```
+
+> `<file>` is the name of the file you want to unstage.
+
+#### Unstage all changes
+
+Use `git reset .` to unstage all changes.
+
+```bash
+git reset .
+```
+
+> `.` means the current directory and its contents.
+
+---
+
+### Show changes on a file
+
+Use `git diff` to show changes on a file.
+
+```bash
+git diff <file>
+```
+
+> `<file>` is the name of the file you want to show changes on.
+> If `<file>` is not specified, it will show changes of all files.
+
+#### Show changes on staged files
+
+Use `git diff --staged` to show changes on staged files.
+
+```bash
+git diff --staged <file>
+```
+
 ### Commit changes
 
 Use `git commit` to commit changes.
@@ -124,8 +224,12 @@ git commit -m "<commit_message>"
 Use `git push` to push changes to a remote repository.
 
 ```bash
-git push
+git push <remote_name> <branch_name>
 ```
+
+> `<remote_name>` is the name of the remote repository you want to push on.
+> `<branch_name>` is the name of the local branch you want to push.
+> `<remote_name>` and `<branch_name>` are optional.
 
 ---
 
@@ -138,6 +242,34 @@ git pull
 ```
 
 ---
+
+### Fetching changes from a remote repository
+
+Use `git fetch` to fetch changes from a remote repository.
+
+```bash
+git fetch
+```
+
+---
+
+### Reverting changes
+
+Use `git reset` to revert changes.
+
+```bash
+git reset <file>
+```
+
+> `<file>` is the name of the file you want to revert.
+
+#### Revert all changes
+
+Use `git reset .` to revert all changes.
+
+```bash
+git reset .
+```
 
 ### Merging branches
 
@@ -157,10 +289,7 @@ git merge <branch_name>
 
 > `<branch_name>` is the name of the branch you want to merge.
 
-## Getting status
+## Sources
 
-Use `git status` to get the status of the working repository.
-
-```bash
-git status
-```
+- [Github Docs](https://docs.github.com/en/get-started/using-git/about-git)
+- [Git cheat sheet (Github education)](https://education.github.com/git-cheat-sheet-education.pdf)

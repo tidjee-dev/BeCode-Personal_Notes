@@ -18,7 +18,8 @@
 | `touch` | Create file                              | `touch <file>`                                     |
 | `echo`  | Write in file (overwrite)                | `echo "<text>" > <file>`                           |
 | `echo`  | Write in file (append)                   | `echo "<text>" >> <file>`                          |
-| `cat`   | Show file content                        | `cat <file>`                                       |
+| `cat`   | Show content of a file                   | `cat <file>`                                       |
+| `cat`   | Show content of multiple files           | `cat <file1> <file2>`                              |
 | `head`  | Show the first 10 lines                  | `head <file>`                                      |
 | `tail`  | Show the last 10 lines                   | `tail <file>`                                      |
 | `cp`    | Copy file                                | `cp <file_source> <file_destination>`              |

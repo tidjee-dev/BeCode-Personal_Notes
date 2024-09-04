@@ -306,6 +306,8 @@ git log
 
 ### Show the commit differences between branches
 
+Show the commits on branch_name_2 that are not on branch_name_1.
+
 ```bash
 git log <branch_name_1>..<branch_name_2>
 ```

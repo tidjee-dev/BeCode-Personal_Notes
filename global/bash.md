@@ -23,7 +23,7 @@ cd <directory>
 
 > `<directory>` is the name of the directory you want to move to.
 
-#### Change directory to the home directory
+#### Change directory to your home directory
 
 ```bash
 cd ~

@@ -239,6 +239,9 @@ rmdir <directory>
 > `<directory>` is the name of the directory you want to delete.
 
 #### Delete a directory recursively
+>
+> [!warning]
+> Pay attention that `rm -R` will delete all the files and subdirectories in the directory.
 
 ```bash
 rm -R <directory>

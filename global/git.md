@@ -337,11 +337,8 @@ git log --follow <file>
 
 > `<file>` is the name of the file you want to show commit history.
 
-## Managing conflicts
-
-###
-
 ## Sources
 
 - [Github Docs](https://docs.github.com/en/get-started/using-git/about-git)
 - [Git cheat sheet (Github education)](https://education.github.com/git-cheat-sheet-education.pdf)
+- [Git & GitHub (MDN)](https://developer.mozilla.org/fr/docs/Learn/Tools_and_testing/GitHub)

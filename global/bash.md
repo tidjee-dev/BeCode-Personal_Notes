@@ -27,7 +27,9 @@
 |      `cp` | Copy directory                               | `cp -R <directory_source> <directory_destination>` |
 |      `mv` | Move file                                    | `mv <file_source> <file_destination>`              |
 |      `rm` | Remove file                                  | `rm <file>`                                        |
-|      `rm` | Remove directory                             | `rm -R <directory>`                                |
+|      `rm` | Remove multiple files                        | `rm <file1> <file2>`                               |
+|      `rm` | Remove directory and its content             | `rm -R <directory>`                                |
+|   `rmdir` | Remove empty directory                       | `rmdir <directory>`                                |
 
 ## Help
 

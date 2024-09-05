@@ -373,7 +373,7 @@ mv *.<file_extension>
 Use `mv` to rename a file.
 
 > [!tip]
-> `mv -v` will print the name of each moved file.
+> `mv -v` will print the name of each renamed file.
 
 ```bash
 mv <file_name> <file_new_name>

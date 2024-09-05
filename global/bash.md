@@ -1,32 +1,33 @@
-# BaSH ch
+# BaSH Cheat Sheet
 
 ## Main Commands
 
-| Command | Description                              | Example                                            |
-| ------- | ---------------------------------------- | -------------------------------------------------- |
-| `clear` | Clear terminal                           | `clear`                                            |
-| `pwd`   | Show working directory                   | `pwd`                                              |
-| `cd`    | Change directory                         | `cd <directory>`                                   |
-| `cd`    | Change directory to a multilevel path    | `cd <directory>/<sub_directory>`                   |
-| `cd`    | Change directory to your home directory  | `cd ~`                                             |
-| `cd`    | Change directory to the parent directory | `cd ..`                                            |
-| `ls`    | List directories and files               | `ls <directory>`                                   |
-| `ls`    | List all directories and files           | `ls -a`                                            |
-| `ls`    | List directories and files recursively   | `ls -R`                                            |
-| `ls`    | Show more information for `ls`           | `ls -lt`                                           |
-| `mkdir` | Create directory                         | `mkdir <directory>`                                |
-| `touch` | Create file                              | `touch <file>`                                     |
-| `echo`  | Write in file (overwrite)                | `echo "<text>" > <file>`                           |
-| `echo`  | Write in file (append)                   | `echo "<text>" >> <file>`                          |
-| `cat`   | Show content of a file                   | `cat <file>`                                       |
-| `cat`   | Show content of multiple files           | `cat <file1> <file2>`                              |
-| `head`  | Show the first 10 lines                  | `head <file>`                                      |
-| `tail`  | Show the last 10 lines                   | `tail <file>`                                      |
-| `cp`    | Copy file                                | `cp <file_source> <file_destination>`              |
-| `cp -R` | Copy directory                           | `cp -R <directory_source> <directory_destination>` |
-| `mv`    | Move file                                | `mv <file_source> <file_destination>`              |
-| `rm`    | Remove file                              | `rm <file>`                                        |
-| `rm -R` | Remove directory                         | `rm -R <directory>`                                |
+| Command   | Description                                  | Example                                            |
+| --------- | -------------------------------------------- | -------------------------------------------------- |
+| `clear`   | Clear terminal                               | `clear`                                            |
+| `history` | Show history                                 | `history`                                          |
+| `pwd`     | Show working directory                       | `pwd`                                              |
+| `cd`      | Change directory                             | `cd <directory>`                                   |
+| `cd`      | Change directory to a multilevel path        | `cd <directory>/<sub_directory>`                   |
+| `cd`      | Change directory to your home directory      | `cd ~`                                             |
+| `cd`      | Change directory to the parent directory     | `cd ..`                                            |
+| `ls`      | List directories and files                   | `ls <directory>`                                   |
+| `ls`      | List all directories and files (even hidden) | `ls -a`                                            |
+| `ls`      | List directories and files recursively       | `ls -R`                                            |
+| `ls`      | Show more information for `ls`               | `ls -lt`                                           |
+| `mkdir`   | Create directory                             | `mkdir <directory>`                                |
+| `touch`   | Create file                                  | `touch <file>`                                     |
+| `echo`    | Write in file (overwrite)                    | `echo "<text>" > <file>`                           |
+| `echo`    | Write in file (append)                       | `echo "<text>" >> <file>`                          |
+| `cat`     | Show content of a file                       | `cat <file>`                                       |
+| `cat`     | Show content of multiple files               | `cat <file1> <file2>`                              |
+| `head`    | Show the first 10 lines                      | `head <file>`                                      |
+| `tail`    | Show the last 10 lines                       | `tail <file>`                                      |
+| `cp`      | Copy file                                    | `cp <file_source> <file_destination>`              |
+| `cp`      | Copy directory                               | `cp -R <directory_source> <directory_destination>` |
+| `mv`      | Move file                                    | `mv <file_source> <file_destination>`              |
+| `rm`      | Remove file                                  | `rm <file>`                                        |
+| `rm`      | Remove directory                             | `rm -R <directory>`                                |
 
 ## Help
 

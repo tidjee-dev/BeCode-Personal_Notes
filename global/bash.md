@@ -29,7 +29,7 @@
 |      `rm` | Remove file                                  | `rm <file>`                                        |
 |      `rm` | Remove multiple files                        | `rm <file1> <file2>`                               |
 |      `rm` | Remove directory and its content             | `rm -R <directory>`                                |
-|   `rmdir` | Remove empty directory                       | `rmdir <directory>`                                |
+|   `rmdir` | Remove empty di# rectory                     | `rmdir <directory>`                                |
 
 ## Help
 
@@ -143,7 +143,8 @@ popd
 
 Use `mkdir` to create a new directory.
 
-> [!tip] > `mkdir -v` will print the name of each created directory.
+> [!tip]
+> `mkdir -v` will print the name of each created directory.
 
 ```bash
 mkdir <directory>
@@ -175,7 +176,8 @@ Use `cp -R` to copy a directory.
 
 `cp` acts like a copy/paste.
 
-> [!tip] > `cp -R -v` will print the name of each copied directory.
+> [!tip]
+> `cp -R -v` will print the name of each copied directory.
 
 ```bash
 cp -R <directory_source> <directory_destination>
@@ -193,7 +195,8 @@ Use `mv` to move a directory.
 
 `mv` acts like a cut/paste.
 
-> [!tip] > `mv -v` will print the name of each moved directory.
+> [!tip]
+> `mv -v` will print the name of each moved directory.
 
 ```bash
 mv <directory_source> <directory_destination>
@@ -219,7 +222,8 @@ mv <directory_name> <directory_new_name>
 
 Use `rm` to delete a directory.
 
-> [!tip] > `rm -v` will print the name of each deleted directory.
+> [!tip]
+> `rm -v` will print the name of each deleted directory.
 
 #### Delete an empty directory
 
@@ -274,7 +278,8 @@ echo "<text>" > <file>
 > `<text>` is the text you want to write in the file.
 > `<file>` is the name of the file you want to write in.
 
-> [!warning] > `>` will overwrite the content of the file.
+> [!warning]
+> `>` will overwrite the content of the file.
 
 #### Write multiple lines in a file
 
@@ -329,7 +334,8 @@ tail <file>
 
 Use `cp` to copy a file.
 
-> [!tip] > `cp -v` will print the name of each copied file.
+> [!tip]
+> `cp -v` will print the name of each copied file.
 
 ```bash
 cp <file_source> <file_destination>
@@ -344,7 +350,8 @@ cp <file_source> <file_destination>
 
 Use `mv` to move a file.
 
-> [!tip] > `mv -v` will print the name of each moved file.
+> [!tip]
+> `mv -v` will print the name of each moved file.
 
 ```bash
 mv <file_source> <file_destination>
@@ -365,7 +372,8 @@ mv *.<file_extension>
 
 Use `mv` to rename a file.
 
-> [!tip] > `mv -v` will print the name of each moved file.
+> [!tip]
+> `mv -v` will print the name of each moved file.
 
 ```bash
 mv <file_name> <file_new_name>
@@ -380,7 +388,8 @@ mv <file_name> <file_new_name>
 
 Use `rm` to delete a file.
 
-> [!tip] > `rm -v` will print the name of each deleted file.
+> [!tip]
+> `rm -v` will print the name of each deleted file.
 
 ```bash
 rm <file>

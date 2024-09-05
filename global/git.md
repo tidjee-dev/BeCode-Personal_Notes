@@ -2,26 +2,26 @@
 
 ## Main Commands
 
-| Command    | Description                                    | Example                             |
-| ---------- | ---------------------------------------------- | ----------------------------------- |
-| `init`     | Initialize a new Git repository                | `git init`                          |
-| `clone`    | Clone a remote repository                      | `git clone <remote_url>`            |
-| `status`   | Show the status of the repository              | `git status`                        |
-| `add`      | Add files to the staging area                  | `git add <file>`, `git add .`       |
-| `reset`    | Unstage changes                                | `git reset <file>`                  |
-| `diff`     | Show the changes on a file                     | `git diff <file1>`                  |
-| `diff`     | Show the changes on the staged files           | `git diff --staged`                 |
-| `commit`   | Commit changes to the repository               | `git commit -m "<commit_message>"`  |
-| `branch`   | List branches                                  | `git branch`                        |
-| `branch`   | Create a new branch                            | `git branch <branch_name>`          |
+|    Command | Description                                    | Example                             |
+| ---------: | ---------------------------------------------- | ----------------------------------- |
+|     `init` | Initialize a new Git repository                | `git init`                          |
+|    `clone` | Clone a remote repository                      | `git clone <remote_url>`            |
+|   `status` | Show the status of the repository              | `git status`                        |
+|      `add` | Add files to the staging area                  | `git add <file>`, `git add .`       |
+|    `reset` | Unstage changes                                | `git reset <file>`                  |
+|     `diff` | Show the changes on a file                     | `git diff <file1>`                  |
+|     `diff` | Show the changes on the staged files           | `git diff --staged`                 |
+|   `commit` | Commit changes to the repository               | `git commit -m "<commit_message>"`  |
+|   `branch` | List branches                                  | `git branch`                        |
+|   `branch` | Create a new branch                            | `git branch <branch_name>`          |
 | `checkout` | Switch to a branch                             | `git checkout <branch_name>`        |
 | `checkout` | Create a new branch and switch to it           | `git checkout -b <new_branch_name>` |
-| `merge`    | Merge changes from a branch                    | `git merge <branch_name>`           |
-| `log`      | View the commit history                        | `git log`                           |
-| `log`      | View the commit history with number of ins/del | `git log --stat`                    |
-| `fetch`    | Fetch changes from a remote repository         | `git fetch`                         |
-| `pull`     | Pull changes from a remote repository          | `git pull`                          |
-| `push`     | Push changes to a remote repository            | `git push`                          |
+|    `merge` | Merge changes from a branch                    | `git merge <branch_name>`           |
+|      `log` | View the commit history                        | `git log`                           |
+|      `log` | View the commit history with number of ins/del | `git log --stat`                    |
+|    `fetch` | Fetch changes from a remote repository         | `git fetch`                         |
+|     `pull` | Pull changes from a remote repository          | `git pull`                          |
+|     `push` | Push changes to a remote repository            | `git push`                          |
 
 ## Install Git
 

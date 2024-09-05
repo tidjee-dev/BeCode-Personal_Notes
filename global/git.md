@@ -13,13 +13,13 @@
 |     `diff` | Show the changes on the staged files           | `git diff --staged`                 |
 |   `commit` | Commit changes to the repository               | `git commit -m "<commit_message>"`  |
 |   `branch` | List branches                                  | `git branch`                        |
-|   `branch` | Create a new branch                            | `git branch <new_branch_name>`          |
+|   `branch` | Create a new branch                            | `git branch <new_branch_name>`      |
 | `checkout` | Switch to a branch                             | `git checkout <branch_name>`        |
 | `checkout` | Create a new branch and switch to it           | `git checkout -b <new_branch_name>` |
 |    `merge` | Merge changes from a branch                    | `git merge <branch_name>`           |
 |      `log` | View the commit history                        | `git log`                           |
 |      `log` | View the commit history with number of ins/del | `git log --stat`                    |
-|    `fetch` | Fetch changes from a remote repository         | `git fetch`                         |
+|    `fetch` | Fetch changes from a remote repository         | `git fetch`                         |  
 |     `pull` | Pull changes from a remote repository          | `git pull`                          |
 |     `push` | Push changes to a remote repository            | `git push`                          |
 

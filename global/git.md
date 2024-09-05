@@ -13,7 +13,7 @@
 |     `diff` | Show the changes on the staged files           | `git diff --staged`                 |
 |   `commit` | Commit changes to the repository               | `git commit -m "<commit_message>"`  |
 |   `branch` | List branches                                  | `git branch`                        |
-|   `branch` | Create a new branch                            | `git branch <branch_name>`          |
+|   `branch` | Create a new branch                            | `git branch <new_branch_name>`          |
 | `checkout` | Switch to a branch                             | `git checkout <branch_name>`        |
 | `checkout` | Create a new branch and switch to it           | `git checkout -b <new_branch_name>` |
 |    `merge` | Merge changes from a branch                    | `git merge <branch_name>`           |

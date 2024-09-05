@@ -209,6 +209,9 @@ mv <directory_source> <directory_destination>
 
 Use `mv` to rename a directory.
 
+> [!tip]
+> `mv -v` will print the name of each renamed directory.
+
 ```bash
 mv <directory_name> <directory_new_name>
 ```

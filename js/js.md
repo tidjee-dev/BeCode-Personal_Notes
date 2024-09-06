@@ -1,5 +1,21 @@
 # JavaScript Cheat Sheet
 
+## Summary
+
+| Code          | Description                | Example                             |
+| ------------- | -------------------------- | ----------------------------------- |
+| `let`         | Declare a variable         | `let variableName = value;`         |
+| `const`       | Declare a constant         | `const constantName = value;`       |
+| `console.log` | Print a variable           | `console.log(variableName);`        |
+| `typeof`      | Get the type of a variable | `console.log(typeof variableName);` |
+| `+`           | Addition operator          | `console.log(1 + 2);`               |
+| `-`           | Subtraction operator       | `console.log(1 - 2);`               |
+| `*`           | Multiplication operator    | `console.log(1 * 2);`               |
+| `/`           | Division operator          | `console.log(1 / 2);`               |
+| `%`           | Modulo operator            | `console.log(1 % 2);`               |
+| `**`          | Exponentiation operator    | `console.log(1 ** 2);`              |
+| `function`    | Declare a function         | `function functionName() {}`        |
+
 ## Variables
 
 Use `let` to declare a variable.
@@ -43,8 +59,8 @@ let numberFloat = 42.0;
 let string = "Hello, World!";
 let boolean = true;
 let object = {
-    name: "John",
-    age: 30
+  name: "John",
+  age: 30,
 };
 let array = [1, 2, 3];
 
@@ -78,11 +94,11 @@ console.log("2", localVariable); // Output: "Error: ReferenceError: localVariabl
 console.log("3", blockVariable); // Output: "Error: ReferenceError: blockVariable is not defined"
 
 function myFunction(blockVariable = "BLOCK") {
-    let localVariable = "LOCAL";
+  let localVariable = "LOCAL";
 
-    console.log("4", globalVariable); // Output: "4 GLOBAL"
-    console.log("5", localVariable); // Output: "5 LOCAL"
-    console.log("6", blockVariable); // Output: "6 BLOCK"
+  console.log("4", globalVariable); // Output: "4 GLOBAL"
+  console.log("5", localVariable); // Output: "5 LOCAL"
+  console.log("6", blockVariable); // Output: "6 BLOCK"
 }
 
 myFunction();
@@ -109,17 +125,16 @@ let numberFloat = 42.0; // float
 let string = "Hello, World!";
 let boolean = true;
 let object = {
-    name: "John",
-    age: 30
+  name: "John",
+  age: 30,
 };
 let array = [1, 2, 3];
-
 
 console.log(typeof numberInt); // Output: "number"
 console.log(typeof numberFloat); // Output: "number"
 console.log(typeof string); // Output: "string"
 console.log(typeof boolean); // Output: "boolean"
-console.log(typeof object); // Output: "object" 
+console.log(typeof object); // Output: "object"
 console.log(typeof array); // Output: "object"
 ```
 
@@ -212,7 +227,7 @@ Example:
 
 ```js
 function add(a, b) {
-    return a + b;
+  return a + b;
 }
 
 let result = add(10, 5);

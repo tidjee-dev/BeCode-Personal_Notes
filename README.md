@@ -1,6 +1,6 @@
-# CheatSheets
+# Personal notes
 
-This repo contains cheat sheets that I've written during the Junior Developer Formation @BeCode 2024.
+This repo contains notes I've written during the Junior Developer Formation @BeCode 2024.
 
 ## Base
 

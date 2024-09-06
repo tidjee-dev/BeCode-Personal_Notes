@@ -30,6 +30,8 @@
 |      `rm` | Remove multiple files                        | `rm <file1> <file2>`                               |
 |      `rm` | Remove directory and its content             | `rm -R <directory>`                                |
 |   `rmdir` | Remove empty di# rectory                     | `rmdir <directory>`                                |
+|    `code` | Open file in VSCode                          | `code <file>`                                      |
+|    `code` | Open current directory in VSCode                     | `code .`                                 |
 
 ## Help
 

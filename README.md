@@ -9,5 +9,7 @@ This repo contains my notes written during the Junior Developer Formation @BeCod
 
 ## Javascript
 
-- [Javascript](js/js.md)
+- [Arrays](js/js-array.md)
 - [Data types](js/js-data-type.md)
+- [Javascript](js/js.md)
+- [Loops](js/js-loop.md)

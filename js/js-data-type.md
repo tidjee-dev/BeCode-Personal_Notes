@@ -2,14 +2,14 @@
 
 ## Summary
 
-|      Type | Description                                                                                  | Example                                       |
-|----------:|----------------------------------------------------------------------------------------------|-----------------------------------------------|
-|    String | A string is a sequence of characters.                                                        | `let string = "Hello, World!";`               |
-|    Number | A number is a numerical value. It can be positive, negative, or zero and integers or floats. | `let numberInt = 42; let numberFloat = 42.0;` |
-|   Boolean | A boolean is a logical value that can be either true or false.                               | `let boolean = true;`                         |
-|    Object | An object is a collection of properties.                                                     | `let object = { name: "John", age: 30 };`     |
-|      Null | A null value is a special value that represents the absence of a value.                      | `let nullValue = null;`                       |
-| Undefined | An undefined value is a special value that represents an uninitialized value.                | `let undefinedValue;`                         |
+|      Type | Description                                                                                  | Example                                         |
+|----------:|----------------------------------------------------------------------------------------------|-------------------------------------------------|
+|    String | A string is a sequence of characters.                                                        | `let string = "Hello, World!";`                 |
+|    Number | A number is a numerical value. It can be positive, negative, or zero and integers or floats. | `let numberInt = 42;` `let numberFloat = 42.0;` |
+|   Boolean | A boolean is a logical value that can be either true or false.                               | `let boolean = true;`                           |
+|    Object | An object is a collection of properties.                                                     | `let object = {};`                              |
+|      Null | A null value is a special value that represents the absence of a value.                      | `let nullValue = null;`                         |
+| Undefined | An undefined value is a special value that represents an uninitialized value.                | `let undefinedValue;`                           |
 
 ## String
 

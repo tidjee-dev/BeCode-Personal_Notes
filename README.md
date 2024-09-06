@@ -10,4 +10,4 @@ This repo contains cheat sheets that I've written during the Junior Developer Fo
 ## Javascript
 
 - [Javascript](js/js.md)
-- [Data types](js/data-type.md)
+- [Data types](js/js-data-type.md)

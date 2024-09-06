@@ -4,8 +4,8 @@ This repo contains cheat sheets that I've written during the Junior Developer Fo
 
 ## Global
 
-- [BaSH](global/bash.md)
-- [Git](global/git.md)
+- [BaSH](base/bash.md)
+- [Git](base/git.md)
 
 ## Javascript
 

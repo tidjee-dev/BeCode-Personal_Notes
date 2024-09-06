@@ -2,7 +2,7 @@
 
 This repo contains cheat sheets that I've written during the Junior Developer Formation @BeCode 2024.
 
-## Global
+## Base
 
 - [BaSH](base/bash.md)
 - [Git](base/git.md)

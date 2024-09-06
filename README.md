@@ -1,6 +1,6 @@
 # Personal notes
 
-This repo contains notes I've written during the Junior Developer Formation @BeCode 2024.
+This repo contains my notes written during the Junior Developer Formation @BeCode 2024.
 
 ## Base
 

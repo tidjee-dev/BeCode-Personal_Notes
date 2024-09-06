@@ -1,4 +1,4 @@
-# BaSH Cheat Sheet
+# BaSH Notes
 
 ## Main Commands
 

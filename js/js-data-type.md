@@ -2,14 +2,14 @@
 
 ## Summary
 
-| Type | Description | Example |
-| --- | --- | --- |
-| String | A string is a sequence of characters. | `let string = "Hello, World!";` |
-| Number | A number is a numerical value. It can be positive, negative, or zero and integers or floats. | `let numberInt = 42; let numberFloat = 42.0;` |
-| Boolean | A boolean is a logical value that can be either true or false. | `let boolean = true;` |
-| Object | An object is a collection of properties. | `let object = { name: "John", age: 30 };` |
-| Null | A null value is a special value that represents the absence of a value. | `let nullValue = null;` |
-| Undefined | An undefined value is a special value that represents an uninitialized value. | `let undefinedValue;` |
+|      Type | Description                                                                                  | Example                                       |
+|----------:|----------------------------------------------------------------------------------------------|-----------------------------------------------|
+|    String | A string is a sequence of characters.                                                        | `let string = "Hello, World!";`               |
+|    Number | A number is a numerical value. It can be positive, negative, or zero and integers or floats. | `let numberInt = 42; let numberFloat = 42.0;` |
+|   Boolean | A boolean is a logical value that can be either true or false.                               | `let boolean = true;`                         |
+|    Object | An object is a collection of properties.                                                     | `let object = { name: "John", age: 30 };`     |
+|      Null | A null value is a special value that represents the absence of a value.                      | `let nullValue = null;`                       |
+| Undefined | An undefined value is a special value that represents an uninitialized value.                | `let undefinedValue;`                         |
 
 ## String
 
@@ -115,7 +115,7 @@ console.log(boolean1 === boolean2); // Output: false
 console.log(boolean1 === boolean3); // Output: true
 ```
 
->[!note]
+> [!note]
 > `=` is to assign a value to a variable.
 > `==` is to compare two values.
 > `===` is to compare two values and check if their types are the same.
@@ -132,9 +132,9 @@ Use `{<key>: <value>, <key>: <value>, ...}` to create an object.
 
 ```js
 let object = {
-    name: "John",
-    age: 30
-}
+  name: "John",
+  age: 30,
+};
 ```
 
 ### Access object properties
@@ -143,8 +143,8 @@ Use `<object_name>[<property_name>]` to access object properties.
 
 ```js
 let object = {
-    name: "John",
-    age: 30
+  name: "John",
+  age: 30,
 };
 
 console.log(object["name"]); // Output: "John"
@@ -157,9 +157,9 @@ Use `hasOwnProperty(<property_name>)` to check if an object has a property.
 
 ```js
 let object = {
-    name: "John",
-    age: 30
-}
+  name: "John",
+  age: 30,
+};
 
 console.log(object.hasOwnProperty("name")); // Output: true
 console.log(object.hasOwnProperty("city")); // Output: false
@@ -171,9 +171,9 @@ Use `<object_name>[<property_name>] = <value>` to add object properties.
 
 ```js
 let object = {
-    name: "John",
-    age: 30
-}
+  name: "John",
+  age: 30,
+};
 
 object["city"] = "New York";
 
@@ -186,9 +186,9 @@ Use `delete <object_name>[<property_name>]` to delete object properties.
 
 ```js
 let object = {
-    name: "John",
-    age: 30
-}
+  name: "John",
+  age: 30,
+};
 
 delete object["age"];
 

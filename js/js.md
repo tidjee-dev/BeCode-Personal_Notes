@@ -1,20 +1,20 @@
-# JavaScript Cheat Sheet
+# JavaScript Notes
 
 ## Summary
 
-| Code          | Description                | Example                             |
-| ------------- | -------------------------- | ----------------------------------- |
-| `let`         | Declare a variable         | `let variableName = value;`         |
-| `const`       | Declare a constant         | `const constantName = value;`       |
-| `console.log` | Print a variable           | `console.log(variableName);`        |
-| `typeof`      | Get the type of a variable | `console.log(typeof variableName);` |
-| `+`           | Addition operator          | `console.log(1 + 2);`               |
-| `-`           | Subtraction operator       | `console.log(1 - 2);`               |
-| `*`           | Multiplication operator    | `console.log(1 * 2);`               |
-| `/`           | Division operator          | `console.log(1 / 2);`               |
-| `%`           | Modulo operator            | `console.log(1 % 2);`               |
-| `**`          | Exponentiation operator    | `console.log(1 ** 2);`              |
-| `function`    | Declare a function         | `function functionName() {}`        |
+|          Code | Description                 | Example                             |
+|--------------:|-----------------------------|-------------------------------------|
+|         `let` | Declare a variable          | `let variableName = value;`         |
+|       `const` | Declare a constant          | `const constantName = value;`       |
+| `console.log` | Print a variable in console | `console.log(variableName);`        |
+|      `typeof` | Get the type of a variable  | `console.log(typeof variableName);` |
+|           `+` | Addition operator           | `console.log(1 + 2);`               |
+|           `-` | Subtraction operator        | `console.log(1 - 2);`               |
+|           `*` | Multiplication operator     | `console.log(1 * 2);`               |
+|           `/` | Division operator           | `console.log(1 / 2);`               |
+|           `%` | Modulo operator             | `console.log(1 % 2);`               |
+|          `**` | Exponentiation operator     | `console.log(1 ** 2);`              |
+|    `function` | Declare a function          | `function functionName() {}`        |
 
 ## Variables
 
@@ -76,6 +76,41 @@ console.log(array); // Output: [1, 2, 3]
 
 Go to [Data types](js-data-type.md) to read about the types of variables and how to use them.
 
+#### Types of method
+
+Use `typeof` to get the type of a variable.
+
+```js
+console.log(typeof <variable_name>);
+```
+
+> `<variable_name>` is the name of the variable you want to get the type of.
+
+Example:
+
+```js
+let numberInt = 42; // int
+let numberFloat = 42.0; // float
+let string = "Hello, World!";
+let boolean = true;
+let object = {
+  name: "John",
+  age: 30,
+};
+let array = [1, 2, 3];
+let undefined;
+let nullVar = null;
+
+console.log(typeof numberInt); // Output: "number"
+console.log(typeof numberFloat); // Output: "number"
+console.log(typeof string); // Output: "string"
+console.log(typeof boolean); // Output: "boolean"
+console.log(typeof object); // Output: "object"
+console.log(typeof array); // Output: "object"
+console.log(typeof undefined); // Output: "undefined"
+console.log(typeof nullVar); // Output: "object"
+```
+
 ### Scope
 
 There are some scopes in JavaScript:
@@ -105,37 +140,6 @@ myFunction();
 console.log("7", globalVariable); // Output: "7 GLOBAL"
 console.log("8", localVariable); // Output: "Error: ReferenceError: localVariable is not defined"
 console.log("9", blockVariable); // Output: "Error: ReferenceError: blockVariable is not defined"
-```
-
-### Types of variables
-
-Use `typeof` to get the type of a variable.
-
-```js
-console.log(typeof <variable_name>);
-```
-
-> `<variable_name>` is the name of the variable you want to get the type of.
-
-Example:
-
-```js
-let numberInt = 42; // int
-let numberFloat = 42.0; // float
-let string = "Hello, World!";
-let boolean = true;
-let object = {
-  name: "John",
-  age: 30,
-};
-let array = [1, 2, 3];
-
-console.log(typeof numberInt); // Output: "number"
-console.log(typeof numberFloat); // Output: "number"
-console.log(typeof string); // Output: "string"
-console.log(typeof boolean); // Output: "boolean"
-console.log(typeof object); // Output: "object"
-console.log(typeof array); // Output: "object"
 ```
 
 ## Constants
@@ -205,11 +209,11 @@ function <function_name>(<parameters>) {
 ```
 
 > `<function_name>` is the name of the function you want to declare.
-> `<parameters>` are the parameters of the function.
+> `<parameters>` are the parameters of the function. They are separated by commas and are optional.
 > `<function_body>` is the body of the function.
 
 > [!tip]
-> To call a function, use `<function_name>()`.
+> To call a function, use `<function_name>(<parameters>)`.
 
 ### Return
 
@@ -231,5 +235,25 @@ function add(a, b) {
 }
 
 let result = add(10, 5);
+console.log(result); // Output: 15
+```
+
+### Arrow function
+
+Use `=>` to declare an arrow function.
+
+```js
+const <function_name> = (<parameters>) => <return_value>;
+```
+
+> `<function_name>` is the name of the function you want to declare. The name is optional.
+> `<parameters>` are the parameters of the function. They are separated by commas and are optional.
+> `<return_value>` is the value that will be returned from the function.
+
+Example:
+
+```js
+const add = (a, b) => a + b;
+const result = add(10, 5);
 console.log(result); // Output: 15
 ```

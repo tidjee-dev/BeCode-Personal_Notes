@@ -58,28 +58,7 @@ console.log(array); // Output: [1, 2, 3]
 
 ### Variable types
 
-There are some variable types in JavaScript:
-
-- number: integer or float
-- string
-- boolean : true or false
-- object
-  - key-value pairs : {key: value}
-  - array : [value1, value2, value3]
-
-Example:
-
-```js
-let numberInt = 42; // int
-let numberFloat = 42.0; // float
-let string = "Hello, World!";
-let boolean = true;
-let object = {
-    name: "John",
-    age: 30
-};
-let array = [1, 2, 3];
-```
+Go to [Data types](data-type.md) to read about the types of variables and how to use them.
 
 ### Scope
 
@@ -155,7 +134,7 @@ const <constant_name> = <value>;
 > `<constant_name>` is the name of the constant you want to declare.
 > `<value>` is the value of the constant.
 
-> [!tip]
+> [!warning]
 > The value of a constant can't be changed.
 
 ## Operators
@@ -213,3 +192,29 @@ function <function_name>(<parameters>) {
 > `<function_name>` is the name of the function you want to declare.
 > `<parameters>` are the parameters of the function.
 > `<function_body>` is the body of the function.
+
+> [!tip]
+> To call a function, use `<function_name>()`.
+
+### Return
+
+Use `return` to return a value from a function.
+
+```js
+function <function_name>(<parameters>) {
+    return <return_value>;
+}
+```
+
+> `<return_value>` is the value that will be returned from the function.
+
+Example:
+
+```js
+function add(a, b) {
+    return a + b;
+}
+
+let result = add(10, 5);
+console.log(result); // Output: 15
+```

@@ -58,7 +58,7 @@ console.log(array); // Output: [1, 2, 3]
 
 ### Variable types
 
-Go to [Data types](data-type.md) to read about the types of variables and how to use them.
+Go to [Data types](js-data-type.md) to read about the types of variables and how to use them.
 
 ### Scope
 

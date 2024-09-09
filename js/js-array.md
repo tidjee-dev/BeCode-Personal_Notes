@@ -168,8 +168,9 @@ console.log(array); // Output: [2, 3]
 
 ## Get unique values (= remove duplicates)
 
-Use `Array.from(new Set(array))` to get unique values from an array.
-You can also use `[...new Set(array)]` to get unique values from an array.
+Use `[...new Set(array)]` to get unique values from an array.
+
+You can also use `Array.from(new Set(array))`.
 
 ```js
 let uniqueArray = [...new Set(array)];

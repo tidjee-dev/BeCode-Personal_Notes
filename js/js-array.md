@@ -13,7 +13,7 @@
 |                               `array.shift` | Remove the first element                | `array.shift();`                                              |
 |                                 `array.pop` | Remove the last element                 | `array.pop();`                                                |
 |                      `splice(index, count)` | Remove elements from an array           | `array.splice(<index>, <number_of_elements>);`                |
-| `splice(index, 0, element1, element2, ...)` | Replace elements from an array          | `array.splice(<index>, 0, <element1>, <element2>, ...);`      |
+| `splice(index, 0, element1, element2, ...)` | Add elements from an array              | `array.splice(<index>, 0, <element1>, <element2>, ...);`      |
 |                       `[...new Set(array)]` | Get unique values (= remove duplicates) | `let uniqueArray = [...new Set(array)];`                      |
 |                             `array.reverse` | Reverse the array                       | `array.reverse();`                                            |
 |                        `Math.max(...array)` | Find the maximum value                  | `let max = Math.max(...array);`                               |

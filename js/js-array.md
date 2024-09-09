@@ -176,6 +176,10 @@ You can also use `Array.from(new Set(array))`.
 let uniqueArray = [...new Set(array)];
 ```
 
+```js
+let uniqueArray = Array.from(new Set(array));
+```
+
 Example:
 
 ```js

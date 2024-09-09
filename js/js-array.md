@@ -6,7 +6,7 @@
 |--------------------------------------------:|-----------------------------------------|---------------------------------------------------------------|
 |                                 `new Array` | Create an array                         | `let array = new Array(<size>);`                              |
 |                                    `length` | Get the length                          | `let length = array.length;`                                  |
-|                                        `[]` | Access an element                       | `let element = array[<index>];`                               |
+|                                   `array[]` | Access an element                       | `let element = array[<index>];`                               |
 |                                 `array[] =` | Update an element                       | `array[<index>] = value;`                                     |
 |                             `array.unshift` | Add an element at the beginning         | `array.unshift(<value>);`                                     |
 |                                `array.push` | Add an element at the end               | `array.push(<value>);`                                        |

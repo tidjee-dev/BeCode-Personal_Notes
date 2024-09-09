@@ -2,28 +2,28 @@
 
 ## Summary
 
-|                                        Code | Description                             | Example                                                       |
-|--------------------------------------------:|-----------------------------------------|---------------------------------------------------------------|
-|                                 `new Array` | Create an array                         | `let array = new Array(<size>);`                              |
-|                                    `length` | Get the length                          | `let length = array.length;`                                  |
-|                                   `array[]` | Access an element                       | `let element = array[<index>];`                               |
-|                                 `array[] =` | Update an element                       | `array[<index>] = value;`                                     |
-|                             `array.unshift` | Add an element at the beginning         | `array.unshift(<value>);`                                     |
-|                                `array.push` | Add an element at the end               | `array.push(<value>);`                                        |
-|                               `array.shift` | Remove the first element                | `array.shift();`                                              |
-|                                 `array.pop` | Remove the last element                 | `array.pop();`                                                |
-|                      `splice(index, count)` | Remove elements from an array           | `array.splice(<index>, <number_of_elements>);`                |
-| `splice(index, 0, element1, element2, ...)` | Add elements from an array              | `array.splice(<index>, 0, <element1>, <element2>, ...);`      |
-|                       `[...new Set(array)]` | Get unique values (= remove duplicates) | `let uniqueArray = [...new Set(array)];`                      |
-|                             `array.reverse` | Reverse the array                       | `array.reverse();`                                            |
-|                        `Math.max(...array)` | Find the maximum value                  | `let max = Math.max(...array);`                               |
-|                        `Math.min(...array)` | Find the minimum value                  | `let min = Math.min(...array);`                               |
-|                                `array.sort` | Sort the array                          | `array.sort();`                                               |
-|                                `array.flat` | Flatten the array                       | `array.flat();`                                               |
-|                              `array.concat` | Merge two arrays                        | `array.concat(array2);`                                       |
-|                `array.unshift(array.pop())` | Rotate the array (clockwise)            | `array.unshift(array.pop());`                                 |
-|                 `array.push(array.shift())` | Rotate the array (conterclockwise)      | `array.push(array.shift());`                                  |
-|                              `array.filter` | Find common elements                    | `let commonElements = array.filter(x => array2.includes(x));` |
+|                         Code | Description                             | Example                                                       |
+|-----------------------------:|-----------------------------------------|---------------------------------------------------------------|
+|                  `new Array` | Create an array                         | `let array = new Array(<size>);`                              |
+|                     `length` | Get the length                          | `let length = array.length;`                                  |
+|                    `array[]` | Access an element                       | `let element = array[<index>];`                               |
+|                  `array[] =` | Update an element                       | `array[<index>] = value;`                                     |
+|              `array.unshift` | Add an element at the beginning         | `array.unshift(<value>);`                                     |
+|                 `array.push` | Add an element at the end               | `array.push(<value>);`                                        |
+|                `array.shift` | Remove the first element                | `array.shift();`                                              |
+|                  `array.pop` | Remove the last element                 | `array.pop();`                                                |
+|                   `splice()` | Remove elements from an array           | `array.splice(<index>, <number_of_elements>);`                |
+|                   `splice()` | Add elements from an array              | `array.splice(<index>, 0, <element1>, <element2>, ...);`      |
+|        `[...new Set(array)]` | Get unique values (= remove duplicates) | `let uniqueArray = [...new Set(array)];`                      |
+|              `array.reverse` | Reverse the array                       | `array.reverse();`                                            |
+|         `Math.max(...array)` | Find the maximum value                  | `let max = Math.max(...array);`                               |
+|         `Math.min(...array)` | Find the minimum value                  | `let min = Math.min(...array);`                               |
+|                 `array.sort` | Sort the array                          | `array.sort();`                                               |
+|                 `array.flat` | Flatten the array                       | `array.flat();`                                               |
+|               `array.concat` | Merge two arrays                        | `array.concat(array2);`                                       |
+| `array.unshift(array.pop())` | Rotate the array (clockwise)            | `array.unshift(array.pop());`                                 |
+|  `array.push(array.shift())` | Rotate the array (conterclockwise)      | `array.push(array.shift());`                                  |
+|               `array.filter` | Find common elements                    | `let commonElements = array.filter(x => array2.includes(x));` |
 
 ## Create an array
 

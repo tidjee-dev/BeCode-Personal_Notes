@@ -261,9 +261,7 @@ console.log(array); // Output: [1, 2, 3]
 
 > [!note]
 > If you don't specify a comparison function, the array will be sorted in ascending order by default.
-
 > `(a, b) => b - a` is a comparison function that sorts the array in descending order.
-
 > `(a, b) => a - b` is a comparison function that sorts the array in ascending order.
 
 ## Flatten an array

@@ -166,6 +166,53 @@ array.shift();
 console.log(array); // Output: [2, 3]
 ```
 
+## Remove/Add elements by index (Splice)
+
+Use `array.splice(<index>, <number_of_elements_to_remove>, <elements_to_add>)` to remove/add elements by index.
+
+```js
+array.splice(<index>, <number_of_elements_to_remove>, <elements_to_add>);
+```
+
+> `<index>` is the index of the element you want to remove.
+> `<number_of_elements_to_remove>` is the number of elements you want to remove. If not specified, all following elements will be removed. If set to `0`, no elements will be removed. This is optional.
+> `<elements_to_add>` is the new elements you want to add. This is optional.
+
+Example:
+
+```js
+let array = [1, 2, 3, 4, 5];
+console.log("Original array:", array); // Output: [1, 2, 3, 4, 5]
+
+// Remove the element from index 2
+array = [1, 2, 3, 4, 5];
+let array2 = array.splice(2);
+
+console.log("array:", array); // Output: [1, 2]
+console.log("array2:", array2); // Output: [3, 4, 5]
+
+// Remove 2 elements from index 1
+array = [1, 2, 3, 4, 5];
+let array3 = array.splice(2, 2);
+
+console.log("array:", array); // Output: [1, 2, 5]
+console.log("array3:", array3); // Output: [3, 4]
+
+// Add 2 elements at index 1
+array = [1, 2, 3, 4, 5];
+let array4 = array.splice(1, 0, 3, 6);
+
+console.log("array:", array); // Output: [1, 3, 6, 2, 3, 4, 5]
+console.log("array4:", array4); // Output: []
+
+// Remove 2 elements from index 1 and add 2 elements at index 1
+array = [1, 2, 3, 4, 5];
+let array5 = array.splice(1, 2, 3, 6);
+
+console.log("array:", array); // Output: [1, 3, 6, 4, 5]
+console.log("array5:", array5); // Output: [2, 3]
+```
+
 ## Get unique values (= remove duplicates)
 
 Use `[...new Set(array)]` to get unique values from an array.

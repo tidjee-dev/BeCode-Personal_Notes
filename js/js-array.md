@@ -2,26 +2,26 @@
 
 ## Summary
 
-|                         Code | Description                        | Example                                                       |
-|-----------------------------:|------------------------------------|---------------------------------------------------------------|
-|                  `new Array` | Create an array                    | `let array = new Array(<size>);`                              |
-|                     `length` | Get the length                     | `let length = array.length;`                                  |
-|                         `[]` | Access an element                  | `let element = array[<index>];`                               |
-|                  `array[] =` | Update an element                  | `array[<index>] = value;`                                     |
-|              `array.unshift` | Add an element at the beginning    | `array.unshift(<value>);`                                     |
-|                 `array.push` | Add an element at the end          | `array.push(<value>);`                                        |
-|                `array.shift` | Remove the first element           | `array.shift();`                                              |
-|                  `array.pop` | Remove the last element            | `array.pop();`                                                |
-| `Array.from(new Set(array))` | Get unique values                  | `let uniqueArray = Array.from(new Set(array));`               |
-|              `array.reverse` | Reverse the array                  | `array.reverse();`                                            |
-|         `Math.max(...array)` | Find the maximum value             | `let max = Math.max(...array);`                               |
-|         `Math.min(...array)` | Find the minimum value             | `let min = Math.min(...array);`                               |
-|                 `array.sort` | Sort the array                     | `array.sort();`                                               |
-|                 `array.flat` | Flatten the array                  | `array.flat();`                                               |
-|               `array.concat` | Merge two arrays                   | `array.concat(array2);`                                       |
-| `array.unshift(array.pop())` | Rotate the array (clockwise)       | `array.unshift(array.pop());`                                 |
-|  `array.push(array.shift())` | Rotate the array (conterclockwise) | `array.push(array.shift());`                                  |
-|               `array.filter` | Find common elements               | `let commonElements = array.filter(x => array2.includes(x));` |
+|                         Code | Description                             | Example                                                       |
+|-----------------------------:|-----------------------------------------|---------------------------------------------------------------|
+|                  `new Array` | Create an array                         | `let array = new Array(<size>);`                              |
+|                     `length` | Get the length                          | `let length = array.length;`                                  |
+|                         `[]` | Access an element                       | `let element = array[<index>];`                               |
+|                  `array[] =` | Update an element                       | `array[<index>] = value;`                                     |
+|              `array.unshift` | Add an element at the beginning         | `array.unshift(<value>);`                                     |
+|                 `array.push` | Add an element at the end               | `array.push(<value>);`                                        |
+|                `array.shift` | Remove the first element                | `array.shift();`                                              |
+|                  `array.pop` | Remove the last element                 | `array.pop();`                                                |
+|        `[...new Set(array)]` | Get unique values (= remove duplicates) | `let uniqueArray = [...new Set(array)];`                      |
+|              `array.reverse` | Reverse the array                       | `array.reverse();`                                            |
+|         `Math.max(...array)` | Find the maximum value                  | `let max = Math.max(...array);`                               |
+|         `Math.min(...array)` | Find the minimum value                  | `let min = Math.min(...array);`                               |
+|                 `array.sort` | Sort the array                          | `array.sort();`                                               |
+|                 `array.flat` | Flatten the array                       | `array.flat();`                                               |
+|               `array.concat` | Merge two arrays                        | `array.concat(array2);`                                       |
+| `array.unshift(array.pop())` | Rotate the array (clockwise)            | `array.unshift(array.pop());`                                 |
+|  `array.push(array.shift())` | Rotate the array (conterclockwise)      | `array.push(array.shift());`                                  |
+|               `array.filter` | Find common elements                    | `let commonElements = array.filter(x => array2.includes(x));` |
 
 ## Create an array
 
@@ -166,19 +166,20 @@ array.shift();
 console.log(array); // Output: [2, 3]
 ```
 
-## Get unique values
+## Get unique values (= remove duplicates)
 
 Use `Array.from(new Set(array))` to get unique values from an array.
+You can also use `[...new Set(array)]` to get unique values from an array.
 
 ```js
-let uniqueArray = Array.from(new Set(array));
+let uniqueArray = [...new Set(array)];
 ```
 
 Example:
 
 ```js
 let array = [1, 2, 2, 3, 3, 3];
-let uniqueArray = Array.from(new Set(array));
+let uniqueArray = [...new Set(array)];
 
 console.log(uniqueArray); // Output: [1, 2, 3]
 ```
@@ -366,23 +367,6 @@ for (let i = 0; i < 2; i++) {
 }
 
 console.log(array); // Output: [3, 4, 5, 6, 1, 2]
-```
-
-## Remove duplicates
-
-Use `Array.from(new Set(array))` to remove duplicates from an array.
-
-```js
-let uniqueArray = Array.from(new Set(array));
-```
-
-Example:
-
-```js
-let array = [1, 2, 2, 3, 3, 3];
-let uniqueArray = Array.from(new Set(array));
-
-console.log(uniqueArray); // Output: [1, 2, 3]
 ```
 
 ## Find common elements

@@ -12,6 +12,7 @@
 |                 `array.push` | Add an element at the end               | `array.push(<value>);`                                        |
 |                `array.shift` | Remove the first element                | `array.shift();`                                              |
 |                  `array.pop` | Remove the last element                 | `array.pop();`                                                |
+|                    `slice()` | Get elements from an array              | `let slicedArray = array.slice(<start>, <end>);`              |
 |                   `splice()` | Remove elements from an array           | `array.splice(<index>, <number_of_elements>);`                |
 |                   `splice()` | Add elements from an array              | `array.splice(<index>, 0, <element1>, <element2>, ...);`      |
 |        `[...new Set(array)]` | Get unique values (= remove duplicates) | `let uniqueArray = [...new Set(array)];`                      |
@@ -166,6 +167,48 @@ let array = [1, 2, 3];
 array.shift();
 
 console.log(array); // Output: [2, 3]
+```
+
+## Extract elements without modifying the original array
+
+Use `array.slice(<start_index>, <end_index>)` to extract elements from an array without modifying the original array.
+
+```js
+array.slice(<start_index>, <end_index>);
+```
+
+> `<start_index>` is the index of the element you want to start from. If not specified, it will start from the beginning. This is optional.
+> `<end_index>` is the index of the element you want to end at. If not specified, it will end at the end of the array. This is optional.
+
+Example:
+
+```js
+let array = [1, 2, 3, 4, 5];
+console.log("Original array:", array); // Output: [1, 2, 3, 4, 5]
+
+// Slice the array from index 1 to index 3 will return the elements from index 1 to index 3 not included
+let array2 = array.slice(1, 3);
+
+console.log("array:", array); // Output: [1, 2, 3, 4, 5]
+console.log("array2:", array2); // Output: [2, 3]
+
+// Slice the array from index 2 will return the elements from index 2 to the end
+let array3 = array.slice(2);
+
+console.log("array:", array); // Output: [1, 2, 3, 4, 5]
+console.log("array3:", array3); // Output: [3, 4, 5]
+
+// Slice the array from index -1 will return the last element
+let array4 = array.slice(-1);
+
+console.log("array:", array); // Output: [1, 2, 3, 4, 5]
+console.log("array4:", array4); // Output: [5]
+
+// Slice the array from index -2 will return the two last elements
+let array5 = array.slice(-2);
+
+console.log("array:", array); // Output: [1, 2, 3, 4, 5]
+console.log("array5:", array5); // Output: [4, 5]
 ```
 
 ## Remove/Add elements by index (splice)

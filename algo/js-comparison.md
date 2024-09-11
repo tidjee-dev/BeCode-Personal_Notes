@@ -222,33 +222,6 @@ if (x <= y) {
 
 ## Logical Operators
 
-### Results of logical comparisons
-
-#### AND (`&&`)
-
-| value1 | value2 | result |
-|--------|--------|--------|
-| true   | true   | true   |
-| true   | false  | false  |
-| false  | true   | false  |
-| false  | false  | false  |
-
-#### OR (`||`)
-
-| value1 | value2 | result |
-|--------|--------|--------|
-| true   | true   | true   |
-| true   | false  | true   |
-| false  | true   | true   |
-| false  | false  | false  |
-
-#### NOT (`!`)
-
-| value | result |
-|-------|--------|
-| true  | false  |
-| false | true   |
-
 ### `&&` (AND)
 
 Use `&&` to execute a block of code if both conditions are true.
@@ -314,3 +287,30 @@ for (let i = 0; i < 10; i++) {
     }
 }
 ```
+
+### Results of logical comparisons
+
+#### AND (`&&`)
+
+| value1 | value2 | result |
+|--------|--------|--------|
+| true   | true   | true   |
+| true   | false  | false  |
+| false  | true   | false  |
+| false  | false  | false  |
+
+#### OR (`||`)
+
+| value1 | value2 | result |
+|--------|--------|--------|
+| true   | true   | true   |
+| true   | false  | true   |
+| false  | true   | true   |
+| false  | false  | false  |
+
+#### NOT (`!`)
+
+| value | result |
+|-------|--------|
+| true  | false  |
+| false | true   |

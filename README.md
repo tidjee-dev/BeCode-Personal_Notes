@@ -7,12 +7,12 @@ This repo contains my notes written during the Junior Developer Formation @BeCod
 - [BaSH](base/bash.md)
 - [Git](base/git.md)
 
-## Javascript
+## Algorithms basis (with Javascript)
 
-- [Arrays](js/js-array.md)
-- [Comparison](js/js-comparison.md)
-- [Conditions](js/js-condition.md)
-- [Data types](js/js-data-type.md)
-- [Javascript](js/js.md)
-- [JSON & Objects in JavaScript](js/json.md)
-- [Loops](js/js-loop.md)
+- [Arrays](algo/js-array.md)
+- [Comparison](algo/js-comparison.md)
+- [Conditions](algo/js-condition.md)
+- [Data types](algo/js-data-type.md)
+- [Javascript](algo/js.md)
+- [JSON & Objects in JavaScript](algo/json-objects.md)
+- [Loops](algo/js-loop.md)

@@ -1,4 +1,4 @@
-# Data Types
+# Data Types in JavaScript
 
 ## Summary
 

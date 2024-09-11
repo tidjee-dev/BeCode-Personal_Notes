@@ -1,4 +1,4 @@
-# JavaScript Notes
+# JavaScript
 
 ## Summary
 

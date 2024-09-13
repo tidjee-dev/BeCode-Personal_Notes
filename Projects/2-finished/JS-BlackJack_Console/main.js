@@ -170,7 +170,7 @@ const displayMenuOptions = () => {
                 readLeaderboard();
                 break;
             case 'r':
-                console.clear();
+                // console.clear();
                 resetLeaderboard();
                 break;
             case 'q':
@@ -203,12 +203,12 @@ const gameLoop = () => {
         switch (answer.toLowerCase()) {
             case 'y':
                 const newCard = getRandomNumber(1, 11);
-                playerCard += newCard;
+                playerScore += newCard;
                 console.log(`\nYou got: ${newCard}`);
-                console.log(`\nYour total: ${playerCard}`);
-                if (playerCard >= 21) {
+                console.log(`\nYour total: ${playerScore}`);
+                if (playerScore >= 21) {
                     checkWinner();
-                    saveScore(playerCard, bankScore);
+                    saveScore(playerScore, bankScore);
                     retry();
                     break;
                 } else {
@@ -217,7 +217,7 @@ const gameLoop = () => {
                 break;
             case 'n':
                 checkWinner();
-                saveScore(playerCard, bankScore);
+                saveScore(playerScore, bankScore);
                 retry();
                 break;
             default:
@@ -229,46 +229,49 @@ const gameLoop = () => {
 
 const checkWinner = () => {
     switch (true) {
-        case (playerCard === 21):
+        case (playerScore === 21):
             console.log(`${GREEN}\nBlackJack! Player wins!${RESET}`);
+            console.log(`Player score: ${playerScore} | Bank score: ${bankScore}`);
             retry();
             break;
-        case (playerCard > 21):
+        case (playerScore > 21):
             console.log(`${RED}\nBusted! Bank wins!${RESET}`);
+            console.log(`Player score: ${playerScore} | Bank score: ${bankScore}`);
             retry();
             break;
         case (bankScore === 21):
             console.log(`${RED}\nBank wins!${RESET}`);
+            console.log(`Player score: ${playerScore} | Bank score: ${bankScore}`);
             retry();
             break;
-        case (playerCard > bankScore):
+        case (playerScore > bankScore):
             console.log(`${GREEN}\nPlayer wins!${RESET}`);
+            console.log(`Player score: ${playerScore} | Bank score: ${bankScore}`);
             retry();
             break;
-        case (bankScore > playerCard):
+        case (bankScore > playerScore):
             console.log(`${RED}\nBank wins!${RESET}`);
+            console.log(`Player score: ${playerScore} | Bank score: ${bankScore}`);
             retry();
             break;
         default:
             gameLoop();
             break;
     }
-    // saveScore(playerCard, bankScore);
 }
 
 const play = () => {
     console.clear();
 
-    // Ask player for name
     rl.question('\nEnter your name: ', (name) => {
         console.log(`\nHello, ${name}!`);
 
         playerName = name;
 
         bankScore = getRandomNumber(16, 21);
-        playerCard = getRandomNumber(1, 11);
+        playerScore = getRandomNumber(1, 11);
 
-        console.log(`\nPlayer: ${playerCard}`);
+        console.log(`\nPlayer: ${playerScore}`);
         gameLoop();
     });
 }
@@ -304,13 +307,26 @@ const saveScore = (playerScore, bankScore) => {
     }
 
     const scores = JSON.parse(fs.readFileSync('scores.json'));
-    // date with hh:mm:ss
     const date = new Date().toLocaleString();
-    // const date =new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString();
+    let winner = '';
+    if (playerScore > 21 && bankScore > 21) {
+        winner = 'No winner';
+    } else if (playerScore > 21) {
+        winner = 'Bank';
+    } else if (bankScore > 21) {
+        winner = playerName;
+    } else if (playerScore === bankScore) {
+        winner = 'Tie';
+    } else if (playerScore > bankScore) {
+        winner = playerName;
+    } else {
+        winner = 'Bank';
+    }
+
     scores.push({
         name: playerName,
         date: date,
-        winner: playerScore >= bankScore ? playerName : 'Bank',
+        winner: winner,
         playerScore: playerScore,
         bankScore: bankScore
     });
@@ -318,20 +334,23 @@ const saveScore = (playerScore, bankScore) => {
 }
 
 const readLeaderboard = () => {
-    if (!fs.existsSync('scores.json')) {
-        createJSON();
-    }
-
-    console.log(`\n${GREEN}Leaderboard${RESET}\n`);
     let scores = JSON.parse(fs.readFileSync('scores.json'));
 
-    scores.sort((a, b) => {
-        if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
-        if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-        return b.playerScore - a.playerScore;
-    });
+    if (scores.length > 0) {
+        console.log(`\n------ ${GREEN}Leaderboard${RESET} ------\n`);
 
-    leaderboardTable(scores);
+        scores.sort((a, b) => {
+            if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+            if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+            return b.playerScore - a.playerScore;
+        });
+
+        leaderboardTable(scores);
+    } else {
+        console.clear();
+        console.log(`\n${YELLOW}No leaderboard data available.${RESET}\n`);
+        return displayMenu();
+    }
 
     anyKeyToContinue();
 }
@@ -343,20 +362,29 @@ const eraseLeaderboard = () => {
 }
 
 const resetLeaderboard = () => {
-    rl.question('\nAre you sure you want to reset the leaderboard? (y/n): ', (answer) => {
-        switch (answer.toLowerCase()) {
-            case 'y':
-                eraseLeaderboard();
-                break;
-            case 'n':
-                console.log(`\n${YELLOW}Leaderboard not reset!${RESET}\n`);
-                displayMenu();
-                break;
-            default:
-                console.log(`\nInvalid option ... ${CYAN}Use 'y' or 'n'!${RESET}`);
-                resetLeaderboard();
-        }
-    });
+    if (!fs.existsSync('scores.json' || fs.statSync('scores.json').size === 0)) {
+        // console.clear();
+        console.log(`\n${YELLOW}No leaderboard data available.${RESET}\n`);
+        return displayMenu();
+    } else {
+        rl.question('\nAre you sure you want to reset the leaderboard? (y/n): ', (answer) => {
+            switch (answer.toLowerCase()) {
+                case 'y':
+                    console.clear();
+                    eraseLeaderboard();
+                    break;
+                case 'n':
+                    console.clear();
+                    console.log(`\n${YELLOW}Leaderboard not reset!${RESET}\n`);
+                    displayMenu();
+                    break;
+                default:
+                    console.log(`\nInvalid option ... ${CYAN}Use 'y' or 'n'!${RESET}`);
+                    resetLeaderboard();
+            }
+        });
+    }
+
 }
 
 /**-----------------

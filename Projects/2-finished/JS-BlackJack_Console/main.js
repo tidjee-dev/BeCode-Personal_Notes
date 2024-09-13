@@ -170,7 +170,6 @@ const displayMenuOptions = () => {
                 readLeaderboard();
                 break;
             case 'r':
-                // console.clear();
                 resetLeaderboard();
                 break;
             case 'q':

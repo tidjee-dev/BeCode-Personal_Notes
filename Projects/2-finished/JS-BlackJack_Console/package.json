@@ -1,0 +1,15 @@
+{
+  "name": "js-blackjack_console",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "Tidjee",
+  "license": "ISC",
+  "description": "Small project to play BlackJack in the console made during my Junior Dev formation @BeCode.",
+  "dependencies": {
+    "cli-table3": "^0.6.5"
+  }
+}

@@ -1,11 +1,11 @@
 /**==============================================================
- * *                         BLACKJACK 
+ * *                         BLACKJACK
  *---------------------------------------------------------------*
  *  Author: Tidjee
  *  Date: 2024-09-13
  *  Github: https://github.com/tidjee-dev
- *  Description: Small project to play BlackJack in the console 
- *  made during my Junior Dev formation @BeCode. 
+ *  Description: Small project to play BlackJack in the console
+ *  made during my Junior Dev formation @BeCode.
  *==============================================================**/
 
 const readline = require('readline');
@@ -33,36 +33,66 @@ const RED = '\x1b[31m';
 const BLUE = '\x1b[34m';
 const CYAN = '\x1b[36m';
 
+// * Text decoration
+const BOLD = '\x1b[1m';
+const ITALIC = '\x1b[3m';
+const UNDERLINE = '\x1b[4m';
+
+// * Background colors
+const BG_RED = '\x1b[41m';
+const BG_GREEN = '\x1b[42m';
+const BG_YELLOW = '\x1b[43m';
+const BG_BLUE = '\x1b[44m';
+const BG_CYAN = '\x1b[46m';
+
+// * Style (icon and colored text)
+const SUCCESS = (message) => `✅ ${BG_GREEN}${BOLD}${message}${RESET}`;
+const WARNING = (message) => `⚠️ ${BG_YELLOW}${BOLD}${ITALIC}${message}${RESET}`;
+const ERROR = (message) => `❌ ${BG_RED}${BOLD}${UNDERLINE}${message}${RESET}`;
+const INFO = (message) => `ℹ️ ${BG_BLUE}${BOLD}${message}${RESET}`;
+const DEBUG = (message) => `🐞 ${BG_CYAN}${BOLD}${message}${RESET}`;
+const WIN = (message) => `🎉🎉🎉 ${GREEN}${BOLD}${message}${RESET} 🎉🎉🎉`;
+const LOSE = (message) => `💔 ${RED}${BOLD}${message}${RESET} 💔`;
+const TIE = (message) => `🤝 ${BLUE}${BOLD}${message}${RESET} 🤝`;
+
+console.log(SUCCESS('Player has won!'));
+console.log(WARNING('This is your last chance!'));
+console.log(ERROR('An error occurred!'));
+console.log(INFO('The game has started.'));
+console.log(DEBUG('Debugging the score calculation ... '));
+console.log(WIN('Player wins!'));
+console.log(LOSE('Player loses!'));
+console.log(TIE('Tie!'));
+
+
 /**-----------------
  * *    Tables
  *------------------ */
 
 const displayTitleScreen = () => {
     const menuTable = new TABLE({
-        head: ['Menu'],
+        head: [`${CYAN}${BOLD}Menu${RESET}`],
         colWidths: [40],
         colAligns: ['center'],
         style: {
-            head: ['blue'],
             border: ['grey'],
             compact: true
         }
     });
 
     menuTable.push(
-        ['1. Play'],
-        [''],
+        ['1. Play\n'],
         ['l. Leaderboard'],
         ['r. Reset leaderboard'],
         ['q. Exit'],
     );
 
     const titleTable = new TABLE({
-        head: ['BlackJack!'],
+        head: [`${BG_BLUE}${BOLD}\nBlackJack\n${RESET}`],
         colWidths: [60],
         colAligns: ['center'],
         style: {
-            head: ['blue', 'bold'],
+            head: ['white'],
             border: ['yellow'],
             compact: true
         },
@@ -91,11 +121,10 @@ const displayTitleScreen = () => {
         [`So, are you able to ...\n`],
         [`${YELLOW}BEAT THE BANK!${RESET}`],
         [`\nGLHF!\n`],
-        [menuTable.toString()],
-        [``],
+        [menuTable.toString() + '\n'],
         [`Made in JavaScript by Tidjee\n`],
         [`Source code available at:`],
-        [`${CYAN}https://github.com/tidjee-dev\n${RESET}`]
+        [`${INFO('https://github.com/tidjee-dev')}\n${RESET}`]
     );
 
     console.log(titleTable.toString());
@@ -179,7 +208,7 @@ const displayMenuOptions = () => {
                 break;
             default:
                 console.clear();
-                console.log(`\nInvalid option... ${CYAN}please try again${RESET} \n`);
+                console.log(`\n${INFO('Invalid option!')} ... Try again ... \n`);
                 displayMenu();
                 break;
         }
@@ -187,7 +216,7 @@ const displayMenuOptions = () => {
 }
 
 const anyKeyToContinue = () => {
-    rl.question('\nPress any key to continue ... ', () => {
+    rl.question(`\n${INFO("Press any key to continue ...")}`, () => {
         console.clear();
         displayMenu();
     });
@@ -220,7 +249,7 @@ const gameLoop = () => {
                 retry();
                 break;
             default:
-                console.log(`\nInvalid option ... ${CYAN}Use 'y' or 'n'${RESET}`);
+                console.log(`\n${INFO('Invalid option! ...')} Use 'y' or 'n' \n`);
                 gameLoop();
         }
     });
@@ -229,28 +258,33 @@ const gameLoop = () => {
 const checkWinner = () => {
     switch (true) {
         case (playerScore === 21):
-            console.log(`${GREEN}\nBlackJack! Player wins!${RESET}`);
-            console.log(`Player score: ${playerScore} | Bank score: ${bankScore}`);
+            console.log(`\n${WIN('BlackJack! Player wins!')}!`);
+            console.log(`\nPlayer score: ${playerScore} | Bank score: ${bankScore}`);
             retry();
             break;
         case (playerScore > 21):
-            console.log(`${RED}\nBusted! Bank wins!${RESET}`);
-            console.log(`Player score: ${playerScore} | Bank score: ${bankScore}`);
+            console.log(`\n${LOSE('Busted! Player loses!')}`);
+            console.log(`\nPlayer score: ${playerScore} | Bank score: ${bankScore}`);
             retry();
             break;
         case (bankScore === 21):
-            console.log(`${RED}\nBank wins!${RESET}`);
-            console.log(`Player score: ${playerScore} | Bank score: ${bankScore}`);
+            console.log(`\n${LOSE('BlackJack! Bank wins!')}`);
+            console.log(`\nPlayer score: ${playerScore} | Bank score: ${bankScore}`);
             retry();
             break;
         case (playerScore > bankScore):
-            console.log(`${GREEN}\nPlayer wins!${RESET}`);
-            console.log(`Player score: ${playerScore} | Bank score: ${bankScore}`);
+            console.log(`\n${WIN('Player wins!')}`);
+            console.log(`\nPlayer score: ${playerScore} | Bank score: ${bankScore}`);
             retry();
             break;
         case (bankScore > playerScore):
-            console.log(`${RED}\nBank wins!${RESET}`);
-            console.log(`Player score: ${playerScore} | Bank score: ${bankScore}`);
+            console.log(`\n${LOSE('Bank wins!')}`);
+            console.log(`\nPlayer score: ${playerScore} | Bank score: ${bankScore}`);
+            retry();
+            break;
+        case (bankScore === playerScore):
+            console.log(`\n${TIE('Tie!')}`);
+            console.log(`\nPlayer score: ${playerScore} | Bank score: ${bankScore}`);
             retry();
             break;
         default:
@@ -280,7 +314,7 @@ const getRandomNumber = (min, max) => {
 }
 
 const retry = () => {
-    rl.question('\nDo you want to play again? (y/n): ', (answer) => {
+    rl.question(`${INFO('Do you want to play again? (y/n)')}`, (answer) => {
         switch (answer.toLowerCase()) {
             case 'y':
                 play();
@@ -290,7 +324,7 @@ const retry = () => {
                 displayMenu();
                 break;
             default:
-                console.log('Invalid option');
+                console.log('\nInvalid option');
                 retry();
         }
     });
@@ -333,6 +367,9 @@ const saveScore = (playerScore, bankScore) => {
 }
 
 const readLeaderboard = () => {
+    if (!fs.existsSync('scores.json')) {
+        createJSON();
+    }
     let scores = JSON.parse(fs.readFileSync('scores.json'));
 
     if (scores.length > 0) {
@@ -341,13 +378,13 @@ const readLeaderboard = () => {
         scores.sort((a, b) => {
             if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
             if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-            return b.playerScore - a.playerScore;
+            return b.winner - a.winner;
         });
 
         leaderboardTable(scores);
     } else {
         console.clear();
-        console.log(`\n${YELLOW}No leaderboard data available.${RESET}\n`);
+        console.log(`\n${WARNING('No scores available!')}\n`);
         return displayMenu();
     }
 
@@ -356,14 +393,13 @@ const readLeaderboard = () => {
 
 const eraseLeaderboard = () => {
     createJSON();
-    console.log(`\n${GREEN}Leaderboard reset!${RESET}\n`);
+    console.log(`\n${SUCCESS('Leaderboard cleared!')}\n`);
     displayMenu();
 }
 
 const resetLeaderboard = () => {
     if (!fs.existsSync('scores.json' || fs.statSync('scores.json').size === 0)) {
-        // console.clear();
-        console.log(`\n${YELLOW}No leaderboard data available.${RESET}\n`);
+        console.log(`\n${WARNING('No scores available!')}\n`);
         return displayMenu();
     } else {
         rl.question('\nAre you sure you want to reset the leaderboard? (y/n): ', (answer) => {
@@ -374,11 +410,11 @@ const resetLeaderboard = () => {
                     break;
                 case 'n':
                     console.clear();
-                    console.log(`\n${YELLOW}Leaderboard not reset!${RESET}\n`);
+                    console.log(`\n${INFO('No changes were made!')}\n`);
                     displayMenu();
                     break;
                 default:
-                    console.log(`\nInvalid option ... ${CYAN}Use 'y' or 'n'!${RESET}`);
+                    console.log(`\n${INFO('Invalid option! ...')} Use 'y' or 'n'\n`);
                     resetLeaderboard();
             }
         });
@@ -390,4 +426,4 @@ const resetLeaderboard = () => {
  * *    Main
  *------------------ */
 
-startGame();
+// startGame();

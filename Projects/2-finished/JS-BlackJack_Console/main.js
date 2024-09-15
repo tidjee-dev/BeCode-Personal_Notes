@@ -426,4 +426,4 @@ const resetLeaderboard = () => {
  * *    Main
  *------------------ */
 
-// startGame();
+startGame();

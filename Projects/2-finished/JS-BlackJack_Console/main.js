@@ -32,8 +32,8 @@ const YELLOW = '\x1b[33m';
 const RED = '\x1b[31m';
 const BLUE = '\x1b[34m';
 const CYAN = '\x1b[36m';
-const WHITE = '\x1b[37m';
-const BLACK = '\x1b[30m';
+// const WHITE = '\x1b[37m';
+// const BLACK = '\x1b[30m';
 
 // * Text style
 const BOLD = '\x1b[1m';
@@ -48,7 +48,7 @@ const BG_BLUE = '\x1b[44m';
 const BG_CYAN = '\x1b[46m';
 
 // * Style (icon and colored text)
-const SUCCESS = (message) => `✅ ${BG_GREEN}${BOLD}${BLACK}${message}${RESET}`;
+const SUCCESS = (message) => `✅ ${BG_GREEN}${BOLD}${message}${RESET}`;
 const WARNING = (message) => `⚠️ ${BG_YELLOW}${BOLD}${ITALIC}${message}${RESET}`;
 const ERROR = (message) => `❌ ${BG_RED}${BOLD}${UNDERLINE}${message}${RESET}`;
 const INFO = (message) => `ℹ️ ${BG_BLUE}${BOLD}${message}${RESET}`;
@@ -67,8 +67,6 @@ const testStyle = () => {
     console.log(LOSE('Player loses!'));
     console.log(TIE('Tie!'));
 }
-
-
 
 /**-----------------
  * *    Tables
@@ -193,7 +191,7 @@ const displayMenu = () => {
 }
 
 const displayMenuOptions = () => {
-    rl.question('\nChoose an option: ', (option) => {
+    rl.question('\nChoose an option: \n', (option) => {
         switch (option) {
             case '1':
                 console.clear();
@@ -221,7 +219,7 @@ const displayMenuOptions = () => {
 }
 
 const anyKeyToContinue = () => {
-    rl.question(`\n${INFO("Press any key to continue ...")}`, () => {
+    rl.question(`\n${INFO("Press any key to continue ...")} \n`, () => {
         console.clear();
         displayMenu();
     });
@@ -232,7 +230,7 @@ const gameLoop = () => {
         checkWinner();
     }
 
-    rl.question('\nDo you want another card? (y/n): ', (answer) => {
+    rl.question('\nDo you want another card? (y/n): \n', (answer) => {
         switch (answer.toLowerCase()) {
             case 'y':
                 const newCard = getRandomNumber(1, 11);
@@ -319,7 +317,7 @@ const getRandomNumber = (min, max) => {
 }
 
 const retry = () => {
-    rl.question(`\n${INFO('Do you want to play again? (y/n)')}`, (answer) => {
+    rl.question(`\n${INFO('Do you want to play again? (y/n)')} \n`, (answer) => {
         switch (answer.toLowerCase()) {
             case 'y':
                 play();
@@ -407,7 +405,7 @@ const resetLeaderboard = () => {
         console.log(`\n${WARNING('No scores available!')}\n`);
         return displayMenu();
     } else {
-        rl.question('\nAre you sure you want to reset the leaderboard? (y/n): ', (answer) => {
+        rl.question('\nAre you sure you want to reset the leaderboard? (y/n): \n', (answer) => {
             switch (answer.toLowerCase()) {
                 case 'y':
                     console.clear();
@@ -431,6 +429,6 @@ const resetLeaderboard = () => {
  * *    Main
  *------------------ */
 
-// startGame();
+// testStyle();
 
-testStyle();
+startGame();

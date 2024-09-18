@@ -15,6 +15,7 @@
 |                    `slice()` | Get elements from an array              | `let slicedArray = array.slice(<start>, <end>);`              |
 |                   `splice()` | Remove elements from an array           | `array.splice(<index>, <number_of_elements>);`                |
 |                   `splice()` | Add elements from an array              | `array.splice(<index>, 0, <element1>, <element2>, ...);`      |
+|             `array.filter()` | Find elements in an array               | `let filteredArray = array.filter(<condition>);`              |
 |        `[...new Set(array)]` | Get unique values (= remove duplicates) | `let uniqueArray = [...new Set(array)];`                      |
 |              `array.reverse` | Reverse the array                       | `array.reverse();`                                            |
 |         `Math.max(...array)` | Find the maximum value                  | `let max = Math.max(...array);`                               |
@@ -258,6 +259,25 @@ console.log("array:", array); // Output: [1, 3, 6, 4, 5]
 console.log("array5:", array5); // Output: [2, 3]
 ```
 
+## Filter an array
+
+Use `array.filter(<condition>)` to filter an array.
+
+```js
+array.filter(<condition>);
+```
+
+> `<condition>` is the condition you want to filter.
+
+Example:
+
+```js
+let array = [1, 2, 3, 4, 5];
+let filteredArray = array.filter((x) => x > 2);
+
+console.log(filteredArray); // Output: [3, 4, 5]
+```
+
 ## Get unique values (= remove duplicates)
 
 Use `[...new Set(array)]` to get unique values from an array.
@@ -471,7 +491,7 @@ console.log(array); // Output: [3, 4, 5, 6, 1, 2]
 Use `array1.filter(x => array2.includes(x))` to find common elements in two arrays.
 
 ```js
-let commonElements = array1.filter(x => array2.includes(x));
+let commonElements = array1.filter((x) => array2.includes(x));
 ```
 
 Example:
@@ -479,7 +499,7 @@ Example:
 ```js
 let array1 = [1, 2, 3];
 let array2 = [2, 3, 4];
-let commonElements = array1.filter(x => array2.includes(x));
+let commonElements = array1.filter((x) => array2.includes(x));
 
 console.log(commonElements); // Output: [2, 3]
 ```

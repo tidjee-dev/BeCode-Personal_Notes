@@ -11,6 +11,7 @@
 const readline = require('readline');
 const fs = require('fs');
 const TABLE = require('cli-table3');
+const colors = require('@colors/colors');
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -21,41 +22,39 @@ const rl = readline.createInterface({
  **    Variables
  *------------------ */
 
-let playerName = '';
+let playerName = 'Unknown';
 let playerScore = 0;
 let bankScore = 0;
 
 // * Colors
-const RESET = '\x1b[0m';
-const GREEN = '\x1b[32m';
-const YELLOW = '\x1b[33m';
-const RED = '\x1b[31m';
-const BLUE = '\x1b[34m';
-const CYAN = '\x1b[36m';
-// const WHITE = '\x1b[37m';
-// const BLACK = '\x1b[30m';
+const RESET = colors.reset;
+const GREEN = colors.green;
+const YELLOW = colors.yellow;
+const RED = colors.red;
+const BLUE = colors.blue;
+const CYAN = colors.cyan;
 
 // * Text style
-const BOLD = '\x1b[1m';
-const ITALIC = '\x1b[3m';
-const UNDERLINE = '\x1b[4m';
+const BOLD = colors.bold;
+const ITALIC = colors.italic;
+const UNDERLINE = colors.underline;
 
 // * Background colors
-const BG_RED = '\x1b[41m';
-const BG_GREEN = '\x1b[42m';
-const BG_YELLOW = '\x1b[43m';
-const BG_BLUE = '\x1b[44m';
-const BG_CYAN = '\x1b[46m';
+const BG_RED = colors.bgRed;
+const BG_GREEN = colors.bgGreen;
+const BG_YELLOW = colors.bgYellow;
+const BG_BLUE = colors.bgBlue;
+const BG_CYAN = colors.bgCyan;
 
 // * Style (icon and colored text)
-const SUCCESS = (message) => `✅ ${BG_GREEN}${BOLD}${message}${RESET}`;
-const WARNING = (message) => `⚠️ ${BG_YELLOW}${BOLD}${ITALIC}${message}${RESET}`;
-const ERROR = (message) => `❌ ${BG_RED}${BOLD}${UNDERLINE}${message}${RESET}`;
-const INFO = (message) => `ℹ️ ${BG_BLUE}${BOLD}${message}${RESET}`;
-const DEBUG = (message) => `🐞 ${BG_CYAN}${BOLD}${message}${RESET}`;
-const WIN = (message) => `🎉🎉🎉 ${GREEN}${BOLD}${message}${RESET} 🎉🎉🎉`;
-const LOSE = (message) => `💔 ${RED}${BOLD}${message}${RESET} 💔`;
-const TIE = (message) => `🤝 ${BLUE}${BOLD}${message}${RESET} 🤝`;
+const SUCCESS = (message) => `✅ ${colors.brightGreen(message)}`;
+const WARNING = (message) => `⚠️ ${colors.brightYellow(message)}`;
+const ERROR = (message) => `❌ ${colors.brightRed(message)}`;
+const INFO = (message) => `ℹ️ ${colors.bgBlue(message)}`;
+const DEBUG = (message) => `🐞 ${colors.bgCyan(message)}`;
+const WIN = (message) => `🎉🎉🎉 ${colors.america(message)} 🎉🎉🎉`;
+const LOSE = (message) => `💔 ${colors.brightRed(message)} 💔`;
+const TIE = (message) => `🤝 ${colors.blue(message)} 🤝`;
 
 const testStyle = () => {
     console.log(SUCCESS('Player has won!'));

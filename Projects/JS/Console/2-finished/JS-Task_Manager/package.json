@@ -1,0 +1,15 @@
+{
+  "name": "js-task_manager",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "tidjee",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cli-table3": "^0.6.5"
+  }
+}

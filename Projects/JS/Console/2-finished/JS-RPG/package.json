@@ -1,0 +1,15 @@
+{
+  "name": "js-rpg",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "Tidjee",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cli-table3": "^0.6.5"
+  }
+}

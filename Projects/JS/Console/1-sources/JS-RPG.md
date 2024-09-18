@@ -28,10 +28,11 @@ At the end of a game, the player receives an amount of gold that is used to buy 
 
 ### Difficulty
 
-- **Easy**: 5 enemies
-- **Medium**: 10 enemies
-- **Hard**: 15 enemies
-- **Insane**: 20 enemies
+- **Easy**: 5 enemies/world
+- **Medium**: 10 enemies/world
+- **Hard**: 15 enemies/world
+- **Insane**: 20 enemies/world
+- **Hardcore**: 25 enemies/world
 
 ### Player
 
